@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://safari-resturaunt-boston.herokuapp.com/api/v1/items.json'
+    origins '*'
 
     resource '*',
       headers: :any,

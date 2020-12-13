@@ -48,7 +48,7 @@ items = Item.create([
     },
     {
         name: "MALAB IYO MALAWAX (SWEET CREPES)",
-        image_url: "",
+        image_url: "https://i.imgur.com/xxZRooo.jpeg",
         price: "$6",
         description: "Two crepes drizzled with honey and dusted with sugar; a popular Somali dessert."
     }
