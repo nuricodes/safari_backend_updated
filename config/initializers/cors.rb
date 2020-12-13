@@ -7,9 +7,9 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'example.com'
+    origins 'https://safari-resturaunt-boston.herokuapp.com/api/v1/items.json'
 
-    resource 'https://safari-resturaunt-boston.herokuapp.com/api/v1/items.json',
+    resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
