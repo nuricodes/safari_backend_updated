@@ -5,7 +5,11 @@ module Api
 
              # POST /api/v1/reviews
             def create
-                review = Review.new(review_params)
+                newReview = review_params
+                p newReview
+                newReview["item"] = Item.find(params["item"])
+                review = Review.new(newReview)
+                
 
                 if review.save
                     render json: ReviewSerializer.new(review).serialized_json
@@ -30,7 +34,7 @@ module Api
 
             def review_params
                 #to permit the attributes we want to allow
-                params.require(:review).permit(:title, :description, :score, :airline_id)
+                params.require(:review).permit(:title, :description, :score, :item)
             end
         end
     end
